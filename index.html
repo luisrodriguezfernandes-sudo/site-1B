@@ -1,48 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt/br">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Dev Log</title>
+
+<title>Blog do Vozinha</title>
+
 <style>
-header{
-background-color: rgb(255, 17, 243);
-color:rgb(3, 1, 4);
-border: 5px solid rgb(130, 128, 128);
-padding: 16px; color: rgb(195, 100, 100);
+header {
+background-color: rgb(136, 39, 134);
+color: rgb(243, 194, 16);
 text-align: center;
-}
-main{
-color: black;
-border: 5px solid rgb(109, 88, 88);
+max-width: 800px;
+margin: 0 auto;
+border: 5px solid red;
 padding: 16px;
-background-color: rgb(255, 17, 215);
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-p {
-color: rgb(21, 21, 102);
-font-size: 16px;
-line-height: 1.6;
+
+main {
+background-color: black;
+color: white;
+max-width: 800px;
+margin: 0 auto;
+padding: 16px;
 }
-.autor {
+
+img {
+width: 220px;
+height: 160px;
+object-fit: cover;
+}
+
+.artigo-autor {
 font-weight: bold;
-color: rgb(24, 116, 197);
+}
+
+button {
+cursor: pointer;
+padding: 8px 12px;
+font-size: 18px;
 }
 </style>
 </head>
+
 <body>
-
 <header>
-
-<h1> Registrando meus aprendizados.</h1>
-<p>Explore meus projetos e aprendizados</p>
+<h1>Club do Vozinha Destruidor de Crack</h1>
+<p>
+Descubra mais sobre o goleiro que fecha o gol
+da seleção de Cabo Verde.
+</p>
 </header>
 
 <main>
-<h2> Bem-vindo! Acompanhe o desenvolvimento </h2>
+<img
+src="Gemini_Generated_Image_qiubxhqiubxhqiub.png"
+alt="Imagem do Vozinha"
+>
 
-<p>Por Luiz Miguel
-</p>
+<div>
+<h2>Boas-vindas</h2>
+<p>Seja bem-vindo ao site do Vozinha!</p>
+<p class="artigo-autor">Por: Gabriel Tanaka</p>
 
+<button type="button">
+<button>❤️ <span>0</span></button>
+<button>🤏<span>0</span></button>
+</button>
+</div>
+
+<img
+src="Gemini_Generated_Image_qiubxhqiubxhqiub.png"
+alt="Imagem do Vozinha"
+>
+
+<div>
+<h2>Boas-vindas</h2>
+<p>Seja bem-vindo ao site do Vozinha!</p>
+<p class="artigo-autor">Por: Luis Miguel</p>
+
+<button type="button">
+❤️ <span>0</span>
+</button>
+</div>
 </main>
+
+<script>
+const botao = document.querySelector("main button");
+
+botao.addEventListener("click", botaoClicado);
+
+function botaoClicado() {
+const texto = botao.querySelector("span");
+texto.textContent = Number(texto.textContent) + 1;
+}
+</script>
 </body>
 </html>
