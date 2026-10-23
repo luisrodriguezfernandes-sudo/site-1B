@@ -61,10 +61,10 @@ alt="Imagem do Messi"
 <div>
 <h2>Boas-vindas</h2>
 <p>Seja bem-vindo ao site do Vozinha!</p>
-<p class="artigo-autor">Por: Luis Miguel</p>
+<p class=artigo-autor">Por: Luis Miguel</p>
 
 <button type="button">
-<button>❤️ <span>0</span></button>
+<button>❤️<span>0</span></button>
 <button>🤏<span>0</span></button>
 </button>
 </div>
@@ -86,14 +86,15 @@ alt="Imagem do Messi"
 </main>
 
 <script>
-const botao = document.querySelector("main button");
-
+const botoes = document.querySelector("main button");
+botoes.forEach(function(botao) {
 botao.addEventListener("click", botaoClicado);
-
 function botaoClicado() {
-const texto = botao.querySelector("span");
-texto.textContent = Number(texto.textContent) + 1;
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+texto.textContent++;
 }
+})
 </script>
 </body>
 </html>
